@@ -3277,7 +3277,7 @@ input, select, textarea {
 			.slider {
 			  position: relative;
 			  width: 100%;
-			  height: 100px;
+			  height: 400px;
 			  overflow: hidden;
 			}
 
@@ -3285,61 +3285,22 @@ input, select, textarea {
 			  position: absolute;
 			  top: 0;
 			  left: 0;
-			  width: 300%;
+			  width: auto; /* Change width to auto */
 			  height: 100%;
 			  display: flex;
+			  flex-direction: row;
 			  transition: all 0.5s ease-in-out;
+			  align-items: center;
+			  justify-content: flex-start; /* Add this to align the images to the left */
 			}
 
 			.slider-images img {
-			  width: 33.33%;
-			  height: 100%;
+			  flex: 0 0 150px; /* Add this to give fixed size to images */
+			  height: auto;
 			  cursor: pointer;
+			  object-fit: cover;
+			  margin-right: 10px; /* Add this to add spacing between images */
 			}
-
-			.slider-images img:nth-of-type(2),
-			.slider-images img:nth-of-type(3) {
-			  margin-left: -100%;
-			}
-
-			.slider-large-image {
-			  position: absolute;
-			  top: 0;
-			  right: 0;
-			  width: 66.67%;
-			  height: 100%;
-			  background-color: black;
-			  display: flex;
-			  justify-content: center;
-			  align-items: center;
-			  transition: all 0.5s ease-in-out;
-			}
-
-			.slider-large-image img {
-			  max-width: 100%;
-			  max-height: 100%;
-			}
-
-			.slider:hover .slider-images {
-			  transform: translateX(-33.33%);
-			}
-
-			.slider .slider-images img:focus {
-			  outline: none;
-			}
-
-			.slider .slider-images img:focus + .slider-large-image {
-			  transform: translateX(-100%);
-			}
-
-			.slider .slider-images img:focus + .slider-large-image img {
-			  transform: scale(1);
-			}
-
-			.slider .slider-images img:not(:focus) + .slider-large-image img {
-			  transform: scale(0);
-			}
-
 
 		/* Footer */
 
