@@ -3285,6 +3285,73 @@ input, select, textarea {
 			  position: absolute;
 			  top: 0;
 			  left: 0;
+			  width: 300%;
+			  height: 100%;
+			  display: flex;
+			  transition: all 0.5s ease-in-out;
+			}
+
+			.slider-images img {
+			  width: 33.33%;
+			  height: 100%;
+			  cursor: pointer;
+			}
+
+			.slider-images img:nth-of-type(2),
+			.slider-images img:nth-of-type(3) {
+			  margin-left: -100%;
+			}
+
+			.slider-large-image {
+			  position: absolute;
+			  top: 0;
+			  right: 0;
+			  width: 66.67%;
+			  height: 100%;
+			  background-color: black;
+			  display: flex;
+			  justify-content: center;
+			  align-items: center;
+			  transition: all 0.5s ease-in-out;
+			}
+
+			.slider-large-image img {
+			  max-width: 100%;
+			  max-height: 100%;
+			}
+
+			.slider:hover .slider-images {
+			  transform: translateX(-33.33%);
+			}
+
+			.slider .slider-images img:focus {
+			  outline: none;
+			}
+
+			.slider .slider-images img:focus + .slider-large-image {
+			  transform: translateX(-100%);
+			}
+
+			.slider .slider-images img:focus + .slider-large-image img {
+			  transform: scale(1);
+			}
+
+			.slider .slider-images img:not(:focus) + .slider-large-image img {
+			  transform: scale(0);
+			}
+
+		
+/* 			.slider {
+			  position: relative;
+			  width: 100%;
+			  height: 400px;
+			  overflow: hidden;
+			}
+
+			.slider-images {
+			  position: absolute;
+			  top: 0;
+			  left: 0;
 			  width: 100%;
 			  height: 100%;
 			  display: flex; /* Change display to flex */
@@ -3297,7 +3364,7 @@ input, select, textarea {
 			  height: 100%;
 			  cursor: pointer;
 			  object-fit: cover; /* Set object-fit to cover for image resizing */
-			}
+			} */
 
 /* 			.slider {
 			  position: relative;
