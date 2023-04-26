@@ -3272,6 +3272,47 @@ input, select, textarea {
 				padding-left: 1em;
 				padding-right: 1em;
 			}
+		/* Slider */
+			.slider {
+			  position: relative;
+			  width: 100%;
+			  height: 400px;
+			}
+
+			.slider-images {
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+			  width: 100%;
+			  height: 100%;
+			  display: flex;
+			  justify-content: space-between;
+			  align-items: center;
+			}
+
+			.slider-images img {
+			  max-width: 33.33%;
+			  cursor: pointer;
+			}
+
+			.slider-large {
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+			  width: 100%;
+			  height: 100%;
+			  display: flex;
+			  justify-content: center;
+			  align-items: center;
+			  background-color: rgba(0,0,0,0.5);
+			  display: none;
+			}
+
+			.slider-large img {
+			  max-width: 90%;
+			  max-height: 90%;
+			}
+
 
 		/* Footer */
 
