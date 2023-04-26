@@ -3285,22 +3285,23 @@ input, select, textarea {
 			  position: absolute;
 			  top: 0;
 			  left: 0;
-			  width: auto; /* Change width to auto */
+			  width: auto;
 			  height: 100%;
 			  display: flex;
 			  flex-direction: row;
 			  transition: all 0.5s ease-in-out;
 			  align-items: center;
-			  justify-content: flex-start; /* Add this to align the images to the left */
+			  justify-content: flex-start;
 			}
 
 			.slider-images img {
-			  flex: 0 0 150px; /* Add this to give fixed size to images */
-			  height: auto;
+			  width: 200px; /* Set fixed width */
+			  height: 300px; /* Set fixed height */
 			  cursor: pointer;
 			  object-fit: cover;
-			  margin-right: 10px; /* Add this to add spacing between images */
+			  margin-right: 10px;
 			}
+
 
 		/* Footer */
 
