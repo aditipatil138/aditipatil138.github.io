@@ -3276,36 +3276,22 @@ input, select, textarea {
 			.slider {
 			  position: relative;
 			  width: 100%;
-			  height: 400px;
+			  height: 200px; /* Set height to fit smaller images */
+			  overflow: hidden;
 			}
 
 			.slider-images {
-			  position: absolute;
-			  top: 0;
-			  left: 0;
-			  width: 100%;
-			  height: 100%;
 			  display: flex;
-			  justify-content: space-between;
-			  align-items: center;
+			  flex-wrap: nowrap; /* Prevent images from wrapping to next line */
+			  width: calc(100% * 3); /* Set width to fit three images at a time */
+			  transition: all 0.5s ease-in-out;
 			}
 
 			.slider-images img {
-			  max-width: 33.33%;
+			  width: calc(100% / 3); /* Set width to fit three images at a time */
+			  height: auto;
 			  cursor: pointer;
-			}
-
-			.slider-large {
-			  position: absolute;
-			  top: 0;
-			  left: 0;
-			  width: 100%;
-			  height: 100%;
-			  display: flex;
-			  justify-content: center;
-			  align-items: center;
-			  background-color: rgba(0,0,0,0.5);
-			  display: none;
+			  object-fit: cover;
 			}
 
 			.slider-large img {
